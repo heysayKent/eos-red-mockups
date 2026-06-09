@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EOS RED — 컨셉 A · 시네마틱 임머전형 (목업)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* 컨셉 A 특화 — 시네마틱 풀스크린 */
+.hero-cine{position:relative;height:var(--hero-h);min-height:580px;display:flex;align-items:flex-end;overflow:hidden}
+.hero-cine::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(8,9,14,.35),rgba(8,9,14,.1) 38%,rgba(8,9,14,.96))}
+.hero-cine .hero-content{position:relative;z-index:2;max-width:var(--maxw);margin:0 auto;width:100%;padding:0 28px 72px}
+.hero-title{font-family:var(--font-head);font-weight:900;font-size:4.2rem;line-height:1.05;letter-spacing:.02em;text-shadow:0 4px 30px rgba(0,0,0,.7)}
+.hero-title b{color:var(--red-2)}
+.hero-sub{margin:18px 0 30px;font-size:1.18rem;color:#dcdad3;max-width:48ch}
+.hero-cta{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.feat-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.feat-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+.feat-card .ic{width:46px;height:46px;border-radius:10px;background:linear-gradient(135deg,var(--red),#7d1a12);margin-bottom:16px}
+.feat-card h3{font-family:var(--font-head);font-size:1.2rem;margin-bottom:8px}
+.class-rail{display:flex;gap:18px;overflow:hidden;padding-bottom:6px}
+.class-card{flex:0 0 230px;height:320px;border-radius:var(--radius);position:relative;overflow:hidden;border:1px solid var(--line)}
+.class-card .kv{position:absolute;inset:0;border:0;border-radius:0}
+.class-card .cap{position:absolute;left:0;right:0;bottom:0;padding:16px;background:linear-gradient(0deg,rgba(8,9,14,.96),transparent);font-family:var(--font-head);letter-spacing:.08em;font-size:1.05rem}
+.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;grid-auto-rows:160px;gap:14px}
+.gallery .kv:first-child{grid-row:span 2}
+.news-list{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.news-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.news-card .kv{height:150px;border:0;border-radius:0}
+.news-card .body{padding:16px}
+.news-card .tag{color:var(--gold);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase}
+.cta-band{text-align:center;background:radial-gradient(80% 130% at 50% 0,rgba(210,59,44,.28),transparent),var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+@media(max-width:860px){.feat-3,.news-list{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}.hero-title{font-size:2.6rem}}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="brand">EOS <b>RED</b></div>
+  <nav class="nav"><a>지금 플레이</a><a>세계관</a><a>클래스</a><a>미디어</a><a>뉴스</a><a>지원</a></nav>
+  <div class="header-right"><span class="lang">EN ▾</span><span class="btn btn-play">PLAY NOW</span></div>
+</header>
+
+<!-- 풀스크린 시네마틱 히어로 (배경 영상 자동재생·음소거·루프) -->
+<section class="hero-cine">
+  <div class="video-bg">
+    <iframe src="https://www.youtube.com/embed/tDFQ_y1fmzw?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=tDFQ_y1fmzw&amp;controls=0&amp;showinfo=0&amp;modestbranding=1&amp;rel=0&amp;playsinline=1&amp;disablekb=1" title="EOS RED 시네마틱" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+  <div class="hero-content">
+    <div class="eyebrow">하드코어 판타지 MMORPG · 무설치 즉시 플레이</div>
+    <h1 class="hero-title">죽음을 각오한<br><b>전장</b>으로</h1>
+    <p class="hero-sub">설치도, 기다림도 없다. 브라우저를 여는 순간 가장 잔혹한 대륙이 펼쳐진다.</p>
+    <div class="hero-cta">
+      <span class="btn btn-play btn-lg">▶ 지금 플레이</span>
+      <span class="btn btn-ghost btn-lg">트레일러 보기</span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="eyebrow">The World</div>
+  <h2 class="h2">버려진 신들의 대륙</h2>
+  <p class="lead">관용 없는 전투, 부서지는 장비, 사냥으로만 증명되는 힘 — EOS RED는 타협하지 않는 하드코어 MMORPG의 정수를 브라우저 위에 옮긴다.</p>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="feat-3">
+    <div class="feat-card"><div class="ic"></div><h3>하드코어 전투</h3><p class="lead">강화 실패는 곧 소멸. 모든 선택에 무게가 실린다.</p></div>
+    <div class="feat-card"><div class="ic"></div><h3>오픈 월드</h3><p class="lead">광활한 대륙과 위험으로 가득한 던전.</p></div>
+    <div class="feat-card"><div class="ic"></div><h3>즉시 플레이</h3><p class="lead">다운로드 없이 어떤 브라우저에서든 같은 계정으로.</p></div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="eyebrow">Classes</div>
+  <h2 class="h2">너의 운명을 선택하라</h2>
+  <div class="class-rail">
+    <div class="class-card"><div class="kv"></div><div class="cap">워록</div></div>
+    <div class="class-card"><div class="kv"></div><div class="cap">랜서</div></div>
+    <div class="class-card"><div class="kv"></div><div class="cap">버서커</div></div>
+    <div class="class-card"><div class="kv"></div><div class="cap">레인저</div></div>
+    <div class="class-card"><div class="kv"></div><div class="cap">클레릭</div></div>
+  </div>
+  <p class="note" style="margin-top:10px">※ 목업: 캐러셀은 외형만(슬라이드 이동 미구현). 카드는 키비주얼 placeholder.</p>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="eyebrow">Media</div>
+  <h2 class="h2">스크린샷 & 영상</h2>
+  <div class="gallery">
+    <div class="kv"><span class="kv-label">키비주얼 placeholder</span></div>
+    <div class="kv"></div><div class="kv"></div><div class="kv"></div><div class="kv"></div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="eyebrow">News</div>
+  <h2 class="h2">최신 소식</h2>
+  <div class="news-list">
+    <div class="news-card"><div class="kv"></div><div class="body"><div class="tag">Update</div><p>시즌1: 잿빛 군주 업데이트</p></div></div>
+    <div class="news-card"><div class="kv"></div><div class="body"><div class="tag">Event</div><p>글로벌 런칭 기념 이벤트</p></div></div>
+    <div class="news-card"><div class="kv"></div><div class="body"><div class="tag">Notice</div><p>서버 점검 안내</p></div></div>
+  </div>
+</section>
+
+<section class="section cta-band">
+  <h2 class="h2">지금, 전장으로.</h2>
+  <p class="lead" style="margin:0 auto 24px">설치 없이 바로 시작하세요.</p>
+  <span class="btn btn-play btn-lg">▶ 지금 플레이</span>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div><div class="brand" style="font-size:1.1rem;margin-bottom:10px">EOS <b>RED</b></div>
+      <div class="note">© BluePotion Games. 글로벌 서비스(한·대만 제외) 목업.</div></div>
+    <div class="social"><span>D</span><span>X</span><span>f</span><span>▶</span></div>
+    <div class="rating">IARC / 글로벌 등급 표기 영역</div>
+    <div class="legal"><span>이용약관</span><span>개인정보처리방침</span><span>운영정책</span><span>고객지원</span></div>
+  </div>
+</footer>
+
+<div class="mock-flag">목업 · 컨셉 A 시네마틱 · 외형 전용(인터랙션 미구현)</div>
+</body>
+</html>

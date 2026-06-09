@@ -1,0 +1,87 @@
+/* EOS_Red 서비스 페이지 목업 — 공통 디자인 시스템
+   대상: 한·대만 제외 글로벌(1차 아시아) / 다크 하드코어 판타지 MMORPG
+   ※ 정적 목업: 메뉴·버튼은 외형만(페이지 이동·확대 등 인터랙션 미구현) */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700;900&display=swap');
+
+:root{
+  --bg:#0a0b10; --bg2:#10121a; --panel:#161925; --panel2:#1d2130;
+  --line:#2a2f40;
+  --gold:#c9a24b; --gold-2:#e7c777;
+  --red:#d23b2c; --red-2:#ff5a45;
+  --text:#ece9e2; --muted:#9a9bab; --dim:#6c6e7e;
+  --maxw:1200px; --hero-h:90vh; --radius:10px;
+  --shadow:0 10px 30px rgba(0,0,0,.45);
+  --font-head:'Noto Serif KR',serif;
+  --font-logo:'Cinzel',serif;
+  --font-body:'Noto Sans KR','Noto Sans',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);line-height:1.6;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+/* 목업: 클릭 비활성(외형 전용) */
+.nav a,.btn,.lang{cursor:default;user-select:none}
+
+/* ===== 헤더 ===== */
+.site-header{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;
+  padding:14px 28px;background:linear-gradient(180deg,rgba(8,9,14,.94),rgba(8,9,14,0));backdrop-filter:blur(4px)}
+.brand{font-family:var(--font-logo);font-weight:700;font-size:1.4rem;letter-spacing:.14em;white-space:nowrap}
+.brand b{color:var(--red-2)}
+.nav{display:flex;gap:26px;font-size:.84rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.nav a:hover{color:var(--text)}
+.header-right{display:flex;align-items:center;gap:14px}
+.lang{font-size:.78rem;color:var(--muted);border:1px solid var(--line);padding:5px 10px;border-radius:6px}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-body);font-weight:800;letter-spacing:.1em;
+  text-transform:uppercase;padding:11px 26px;border-radius:8px;border:0;font-size:.84rem}
+.btn-play{background:linear-gradient(135deg,var(--red),#a52218);color:#fff;box-shadow:0 6px 18px rgba(210,59,44,.4)}
+.btn-ghost{background:transparent;border:1px solid var(--gold);color:var(--gold-2)}
+.btn-gold{background:linear-gradient(135deg,var(--gold-2),var(--gold));color:#1a1406}
+.btn-lg{padding:16px 40px;font-size:1rem}
+
+/* ===== 공통 섹션 ===== */
+.section{max-width:var(--maxw);margin:0 auto;padding:84px 28px}
+.eyebrow{font-family:var(--font-head);color:var(--gold);letter-spacing:.24em;text-transform:uppercase;font-size:.76rem;margin-bottom:14px}
+.h2{font-family:var(--font-head);font-weight:700;font-size:2.3rem;line-height:1.15;margin-bottom:18px}
+.lead{color:var(--muted);max-width:62ch}
+.note{color:var(--dim);font-size:.78rem}
+
+/* 키비주얼 placeholder (실제 게임 아트 부재 → 그라데이션 대체) */
+.kv{position:relative;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);
+  background:
+   radial-gradient(120% 90% at 70% 10%,rgba(210,59,44,.30),transparent 55%),
+   radial-gradient(90% 80% at 20% 90%,rgba(60,80,160,.32),transparent 55%),
+   linear-gradient(160deg,#11131d,#1b1f2e)}
+.kv-label{position:absolute;left:14px;bottom:12px;font-size:.72rem;color:var(--dim);letter-spacing:.08em}
+
+/* 영상 영역 */
+.video-wrap{position:relative;width:100%;height:100%;overflow:hidden;background:#000}
+.video-wrap video,.video-wrap iframe{width:100%;height:100%;object-fit:cover;border:0;display:block}
+.video-pending{position:absolute;inset:0;display:flex;flex-direction:column;gap:12px;align-items:center;justify-content:center;
+  text-align:center;padding:20px;color:var(--muted);
+  background:radial-gradient(80% 80% at 50% 35%,rgba(210,59,44,.22),transparent),linear-gradient(160deg,#0c0e16,#15182433)}
+.play-badge{width:74px;height:74px;border-radius:50%;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;color:var(--gold-2);font-size:1.3rem}
+
+/* 배경 풀커버 영상(16:9를 화면에 꽉 차게) — pointer-events 차단(외형 전용, 클릭 불가) */
+.video-bg{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.video-bg iframe{position:absolute;top:50%;left:50%;width:max(100%,177.78vh);height:max(100%,56.25vw);transform:translate(-50%,-50%)}
+/* 16:9 인라인 영상(트레일러 섹션용) */
+.video-16x9{position:relative;aspect-ratio:16/9;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:#000}
+.video-16x9 iframe{position:absolute;inset:0;width:100%;height:100%}
+
+/* 푸터 */
+.site-footer{border-top:1px solid var(--line);background:#070810;padding:46px 28px;color:var(--muted);font-size:.85rem}
+.footer-inner{max-width:var(--maxw);margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:flex-start}
+.social{display:flex;gap:12px}
+.social span{width:36px;height:36px;border:1px solid var(--line);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:var(--font-head)}
+.rating{border:1px solid var(--line);padding:6px 10px;border-radius:6px;font-size:.72rem;color:var(--dim)}
+.legal{width:100%;border-top:1px solid var(--line);padding-top:18px;margin-top:6px;color:var(--dim);font-size:.76rem;display:flex;gap:18px;flex-wrap:wrap}
+
+/* 목업 배지 */
+.mock-flag{position:fixed;right:12px;bottom:12px;z-index:99;background:var(--panel);border:1px solid var(--line);
+  color:var(--muted);font-size:.72rem;padding:7px 12px;border-radius:20px}
+
+@media(max-width:860px){
+  .nav{display:none}
+  .h2{font-size:1.8rem}
+}

@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EOS RED — 컨셉 B · 라이브 포털·대시보드형 (목업)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* 컨셉 B 특화 — 포털/대시보드 모듈 */
+.hero-portal{max-width:var(--maxw);margin:0 auto;padding:96px 28px 20px;display:grid;grid-template-columns:1fr 330px;gap:18px}
+.hero-banner{position:relative;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);min-height:420px}
+.hero-banner::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(8,9,14,.92),transparent 58%)}
+.banner-cap{position:absolute;z-index:2;left:24px;right:24px;bottom:22px}
+.banner-cap .tag{display:inline-block;background:var(--red);color:#fff;font-size:.7rem;letter-spacing:.1em;padding:4px 10px;border-radius:5px;text-transform:uppercase}
+.banner-cap h2{font-family:var(--font-head);font-size:2rem;margin:12px 0 6px;text-shadow:0 2px 16px rgba(0,0,0,.6)}
+.hero-side{display:flex;flex-direction:column;gap:14px}
+.play-cta{background:radial-gradient(120% 100% at 50% 0,rgba(210,59,44,.3),var(--panel));border:1px solid var(--line);border-radius:var(--radius);text-align:center;padding:26px 18px}
+.play-cta .small{color:var(--muted);font-size:.82rem;margin-top:8px}
+.side-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.side-card h4{font-family:var(--font-head);font-size:.96rem;letter-spacing:.06em;margin-bottom:10px;color:var(--gold-2)}
+.modules{max-width:var(--maxw);margin:0 auto;padding:24px 28px 80px;display:grid;grid-template-columns:1.7fr 1fr;gap:18px;align-items:start}
+.mod{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:22px;margin-bottom:18px}
+.mod h3{font-family:var(--font-head);font-size:1.12rem;margin-bottom:14px;display:flex;justify-content:space-between;align-items:center}
+.mod h3 .all{color:var(--gold);font-size:.72rem;letter-spacing:.1em}
+.news-row{display:flex;gap:14px;align-items:center;padding:11px 0;border-bottom:1px solid var(--line)}
+.news-row:last-child{border-bottom:0}
+.news-row .th{width:90px;height:56px;flex:0 0 90px}
+.news-row .tag{color:var(--gold);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase}
+.event-banner{height:120px;position:relative;overflow:hidden}
+.event-banner .cap{position:absolute;left:18px;bottom:14px;z-index:2;font-family:var(--font-head)}
+.rank-row{display:flex;align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid var(--line);font-size:.9rem}
+.rank-row:last-child{border-bottom:0}
+.rank-row .n{font-family:var(--font-head);color:var(--gold);width:22px}
+.rank-row .nm{flex:1}
+.rank-row .sc{color:var(--muted);font-size:.82rem}
+.shop-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.shop-item{aspect-ratio:1;border-radius:8px;position:relative}
+.shop-item .p{position:absolute;left:8px;bottom:6px;font-size:.72rem;color:var(--gold-2);font-family:var(--font-head)}
+.disc-row{display:flex;align-items:center;gap:12px;padding:8px 0}
+.disc-row .d{width:34px;height:34px;border-radius:8px;background:#5865F2;display:flex;align-items:center;justify-content:center;font-family:var(--font-head)}
+@media(max-width:860px){.hero-portal,.modules{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="brand">EOS <b>RED</b></div>
+  <nav class="nav"><a>지금 플레이</a><a>뉴스</a><a>랭킹</a><a>상점</a><a>커뮤니티</a><a>지원</a></nav>
+  <div class="header-right"><span class="lang">EN ▾</span><span class="btn btn-play">PLAY NOW</span></div>
+</header>
+
+<!-- 콤팩트 히어로(좌: 최신 업데이트 영상 배너 / 우: PLAY + 서버상태) -->
+<section class="hero-portal">
+  <div class="hero-banner">
+    <div class="video-bg">
+      <iframe src="https://www.youtube.com/embed/tDFQ_y1fmzw?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=tDFQ_y1fmzw&amp;controls=0&amp;showinfo=0&amp;modestbranding=1&amp;rel=0&amp;playsinline=1&amp;disablekb=1" title="EOS RED 업데이트" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+    <div class="banner-cap">
+      <span class="tag">New Update</span>
+      <h2>시즌1 — 잿빛 군주</h2>
+      <p class="lead" style="color:#d8d6cf">새로운 레이드와 클래스 밸런스 개편이 적용되었습니다.</p>
+    </div>
+  </div>
+  <aside class="hero-side">
+    <div class="play-cta">
+      <span class="btn btn-play btn-lg" style="width:100%;justify-content:center">▶ 지금 플레이</span>
+      <div class="small">무설치 · PC/모바일 브라우저</div>
+    </div>
+    <div class="side-card"><h4>서버 상태</h4>
+      <div class="rank-row" style="border:0;padding:6px 0"><span class="nm">Asia-1</span><span class="sc" style="color:#5fd17a">● 정상</span></div>
+      <div class="rank-row" style="border:0;padding:6px 0"><span class="nm">Global</span><span class="sc" style="color:#5fd17a">● 정상</span></div>
+    </div>
+    <div class="side-card"><h4>다음 점검</h4><p class="lead">06/12 (목) 02:00 – 06:00 (UTC)</p></div>
+  </aside>
+</section>
+
+<!-- 모듈 그리드 -->
+<section class="modules">
+  <div>
+    <div class="mod">
+      <h3>최신 뉴스 <span class="all">VIEW ALL</span></h3>
+      <div class="news-row"><div class="th kv"></div><div><div class="tag">Update</div><p>시즌1 패치노트 v1.2.0</p></div></div>
+      <div class="news-row"><div class="th kv"></div><div><div class="tag">Event</div><p>글로벌 런칭 기념 출석 이벤트</p></div></div>
+      <div class="news-row"><div class="th kv"></div><div><div class="tag">Notice</div><p>아시아 서버 증설 안내</p></div></div>
+      <div class="news-row"><div class="th kv"></div><div><div class="tag">Dev</div><p>개발자 노트: 강화 시스템</p></div></div>
+    </div>
+    <div class="mod">
+      <h3>진행 중 이벤트</h3>
+      <div class="event-banner kv"><span class="cap">⚔ 잿빛 군주 토벌전</span></div>
+    </div>
+  </div>
+  <div>
+    <div class="mod">
+      <h3>랭킹 <span class="all">전체</span></h3>
+      <div class="rank-row"><span class="n">1</span><span class="nm">Valtharion</span><span class="sc">Lv.62</span></div>
+      <div class="rank-row"><span class="n">2</span><span class="nm">Kuroha</span><span class="sc">Lv.61</span></div>
+      <div class="rank-row"><span class="n">3</span><span class="nm">Siregar</span><span class="sc">Lv.60</span></div>
+      <div class="rank-row"><span class="n">4</span><span class="nm">Anuwat</span><span class="sc">Lv.60</span></div>
+    </div>
+    <div class="mod">
+      <h3>상점 <span class="all">SHOP</span></h3>
+      <div class="shop-grid">
+        <div class="shop-item kv"><span class="p">코스튬</span></div>
+        <div class="shop-item kv"><span class="p">펫</span></div>
+        <div class="shop-item kv"><span class="p">패키지</span></div>
+        <div class="shop-item kv"><span class="p">부스터</span></div>
+        <div class="shop-item kv"><span class="p">탈것</span></div>
+        <div class="shop-item kv"><span class="p">캐시</span></div>
+      </div>
+    </div>
+    <div class="mod">
+      <h3>커뮤니티</h3>
+      <div class="disc-row"><span class="d">D</span><div><p>공식 Discord</p><span class="note">128,400 members</span></div></div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div><div class="brand" style="font-size:1.1rem;margin-bottom:10px">EOS <b>RED</b></div>
+      <div class="note">© BluePotion Games. 글로벌 서비스(한·대만 제외) 목업.</div></div>
+    <div class="social"><span>D</span><span>X</span><span>f</span><span>▶</span></div>
+    <div class="rating">IARC / 글로벌 등급 표기 영역</div>
+    <div class="legal"><span>이용약관</span><span>개인정보처리방침</span><span>운영정책</span><span>고객지원</span></div>
+  </div>
+</footer>
+
+<div class="mock-flag">목업 · 컨셉 B 포털·대시보드 · 외형 전용(인터랙션 미구현)</div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EOS RED — 컨셉 C · 원페이지 전환 스토리텔링형 (목업)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* 컨셉 C 특화 — 원페이지 스크롤 전환 */
+.hero-c{position:relative;height:88vh;min-height:560px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;background:#0c0e16}
+.hero-c::before{content:"";position:absolute;inset:-40px;z-index:0;background:url('https://img.youtube.com/vi/tDFQ_y1fmzw/hqdefault.jpg') center/cover no-repeat;filter:blur(16px) brightness(.42) saturate(1.15)}
+.hero-c::after{content:"";position:absolute;inset:0;z-index:1;background:radial-gradient(100% 80% at 50% 18%,rgba(210,59,44,.30),transparent 60%),radial-gradient(90% 70% at 80% 95%,rgba(60,80,160,.20),transparent 55%),linear-gradient(180deg,rgba(10,11,16,.45),rgba(10,11,16,.86))}
+.hero-c .inner{position:relative;z-index:2;padding:0 24px}
+.hero-c .big-title{font-family:var(--font-head);font-weight:900;font-size:4.6rem;line-height:1.04;letter-spacing:.02em}
+.hero-c .big-title b{color:var(--red-2)}
+.hero-c .tagline{font-size:1.35rem;color:#dcdad3;margin:20px auto 32px;max-width:34ch}
+.hero-c .badge-row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:22px;color:var(--muted);font-size:.82rem}
+.hero-c .badge-row span{border:1px solid var(--line);padding:6px 12px;border-radius:20px}
+.values{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;text-align:center}
+.value{padding:24px}
+.value .n{font-family:var(--font-head);font-size:1.4rem;color:var(--gold-2);margin-bottom:10px}
+.section-head{text-align:center;margin-bottom:36px}
+.feat-rail{display:flex;gap:18px;overflow:hidden}
+.feat-slide{flex:0 0 280px;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:var(--panel)}
+.feat-slide .kv{height:170px;border:0;border-radius:0}
+.feat-slide .b{padding:18px}
+.feat-slide h4{font-family:var(--font-head);margin-bottom:6px}
+.proof{display:flex;justify-content:center;gap:64px;text-align:center;flex-wrap:wrap}
+.proof .big{font-family:var(--font-head);font-size:2.8rem;color:var(--gold-2);line-height:1}
+.proof .lbl{color:var(--muted);font-size:.86rem;margin-top:6px}
+.cta-final{text-align:center;background:radial-gradient(80% 140% at 50% 0,rgba(210,59,44,.3),transparent),var(--bg2);border-top:1px solid var(--line)}
+.footer-min{border-top:1px solid var(--line);text-align:center;padding:30px;color:var(--dim);font-size:.8rem}
+@media(max-width:860px){.hero-c .big-title{font-size:3rem}.values{grid-template-columns:1fr}.proof{gap:30px}}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="brand">EOS <b>RED</b></div>
+  <nav class="nav"><a>특징</a><a>트레일러</a><a>플레이어</a></nav>
+  <div class="header-right"><span class="lang">EN ▾</span><span class="btn btn-play">PLAY NOW</span></div>
+</header>
+
+<!-- 히어로: 후킹 + 단일 CTA (무설치 강조) -->
+<section class="hero-c">
+  <div class="inner">
+    <div class="eyebrow">무설치 · 브라우저에서 즉시 플레이</div>
+    <h1 class="big-title">한 번의 클릭,<br><b>가장 잔혹한</b> 전장</h1>
+    <p class="tagline">다운로드도 설치도 없다. 지금 바로 하드코어 MMORPG의 세계로.</p>
+    <span class="btn btn-play btn-lg">▶ 지금 플레이</span>
+    <div class="badge-row"><span>설치 불필요</span><span>PC · 모바일</span><span>크로스 플레이</span></div>
+  </div>
+</section>
+
+<!-- 핵심 가치 3축 -->
+<section class="section">
+  <div class="values">
+    <div class="value"><div class="n">하드코어 전투</div><p class="lead">강화 실패는 소멸. 긴장감이 살아있는 전투.</p></div>
+    <div class="value"><div class="n">광활한 오픈월드</div><p class="lead">끝없는 대륙과 위험한 던전을 탐험.</p></div>
+    <div class="value"><div class="n">즉시 접속</div><p class="lead">브라우저만 있으면 어디서나 같은 계정.</p></div>
+  </div>
+</section>
+
+<!-- 트레일러 (시네마틱 영상) -->
+<section class="section" style="padding-top:0">
+  <div class="section-head"><div class="eyebrow">Trailer</div><h2 class="h2">직접 확인하세요</h2></div>
+  <div class="video-16x9">
+    <iframe src="https://www.youtube.com/embed/tDFQ_y1fmzw?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=tDFQ_y1fmzw&amp;controls=1&amp;modestbranding=1&amp;rel=0&amp;playsinline=1" title="EOS RED 트레일러" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+</section>
+
+<!-- 피처 캐러셀(정적) -->
+<section class="section" style="padding-top:0">
+  <div class="section-head"><div class="eyebrow">Features</div><h2 class="h2">무엇이 기다리는가</h2></div>
+  <div class="feat-rail">
+    <div class="feat-slide"><div class="kv"></div><div class="b"><h4>레이드</h4><p class="lead">협동으로 거대 보스를 공략.</p></div></div>
+    <div class="feat-slide"><div class="kv"></div><div class="b"><h4>PvP</h4><p class="lead">대륙의 패권을 건 전쟁.</p></div></div>
+    <div class="feat-slide"><div class="kv"></div><div class="b"><h4>성장</h4><p class="lead">위험을 감수한 자만의 보상.</p></div></div>
+    <div class="feat-slide"><div class="kv"></div><div class="b"><h4>길드</h4><p class="lead">동료와 함께 쌓는 명성.</p></div></div>
+  </div>
+</section>
+
+<!-- 사회적 증거 -->
+<section class="section" style="padding-top:0">
+  <div class="proof">
+    <div><div class="big">10M+</div><div class="lbl">글로벌 사전등록</div></div>
+    <div><div class="big">4.6★</div><div class="lbl">유저 평점</div></div>
+    <div><div class="big">12개</div><div class="lbl">지원 언어</div></div>
+  </div>
+  <p class="note" style="text-align:center;margin-top:18px">※ 목업 예시 수치 — 실제 데이터 아님.</p>
+</section>
+
+<!-- 2차 CTA -->
+<section class="section cta-final">
+  <h2 class="h2">기다릴 이유가 없다.</h2>
+  <p class="lead" style="margin:0 auto 24px">브라우저를 여는 순간, 모험이 시작됩니다.</p>
+  <span class="btn btn-play btn-lg">▶ 지금 플레이</span>
+</section>
+
+<div class="footer-min">© BluePotion Games · 글로벌 서비스(한·대만 제외) 목업 · IARC 등급 표기 영역</div>
+<div class="mock-flag">목업 · 컨셉 C 원페이지 · 외형 전용(인터랙션 미구현)</div>
+</body>
+</html>
