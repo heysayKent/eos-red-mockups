@@ -85,3 +85,67 @@ a{color:inherit;text-decoration:none}
   .nav{display:none}
   .h2{font-size:1.8rem}
 }
+
+/* ============================================================
+   디자인 퀄리티업 (frontend-design)
+   ============================================================ */
+
+/* 화면 전체 그레인/노이즈 — 다크 판타지 질감 (콘텐츠 위 아주 옅게) */
+body::after{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* 모션 — 로드 시 staggered 등장 + CTA 글로우 */
+@keyframes evtFadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes evtGlow{0%,100%{box-shadow:0 6px 18px rgba(210,59,44,.4)}50%{box-shadow:0 10px 34px rgba(210,59,44,.72)}}
+.hero-content,.hero-c .inner,.banner-cap{animation:evtFadeUp .9s cubic-bezier(.2,.7,.2,1) both}
+.section{animation:evtFadeUp .8s ease both}
+.btn-play{animation:evtGlow 3.4s ease-in-out infinite}
+
+/* 호버 폴리시 (외형 효과 — 페이지 이동 아님) */
+.btn{transition:transform .18s ease,filter .18s ease,box-shadow .18s ease}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.12)}
+.kv,.news-card,.feat-card,.feat-slide,.class-card,.mod,.ccard{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.news-card:hover,.feat-card:hover,.feat-slide:hover,.mod:hover,.ccard:hover{transform:translateY(-4px);border-color:var(--gold);box-shadow:0 16px 40px rgba(0,0,0,.5)}
+.class-card:hover{transform:translateY(-6px) scale(1.02);box-shadow:0 20px 44px rgba(0,0,0,.6)}
+.nav a{position:relative;transition:color .18s}
+.nav a::after{content:"";position:absolute;left:0;right:100%;bottom:-6px;height:2px;background:linear-gradient(90deg,var(--red),var(--gold));transition:right .28s ease}
+.nav a:hover::after{right:0}
+
+/* 헤더 하단 골드 라인 */
+.site-header{background-image:linear-gradient(180deg,rgba(8,9,14,.94),rgba(8,9,14,0)),linear-gradient(90deg,transparent,rgba(201,162,75,.28),transparent);background-repeat:no-repeat;background-position:top,bottom;background-size:100% 100%,100% 1px}
+
+/* ===== 이벤트 팝업(모달) — CSS 토글(JS 없음): 닫기 라벨 클릭 시 숨김 ===== */
+.evt-toggle{position:fixed;opacity:0;width:0;height:0;pointer-events:none}
+.evt-toggle:not(:checked) ~ .evt-modal{display:none}
+.evt-modal{position:fixed;inset:0;z-index:10000;display:flex;align-items:center;justify-content:center;padding:24px;
+  background:radial-gradient(80% 80% at 50% 28%,rgba(210,59,44,.2),transparent),rgba(6,7,12,.82);backdrop-filter:blur(5px);
+  animation:evtFadeUp .4s ease both}
+.evt-modal-card{position:relative;width:min(440px,92vw);border-radius:14px;overflow:hidden;border:1px solid var(--line);
+  background:linear-gradient(160deg,#171a26,#0f111a);box-shadow:0 30px 80px rgba(0,0,0,.7)}
+.evt-modal-kv{height:230px;position:relative;border-bottom:1px solid var(--line)}
+.evt-modal-kv .tag{position:absolute;left:16px;top:16px;background:var(--red);color:#fff;font-size:.7rem;letter-spacing:.1em;padding:5px 12px;border-radius:5px;text-transform:uppercase}
+.evt-modal-body{padding:22px 24px 26px}
+.evt-modal-body h3{font-family:var(--font-head);font-weight:700;font-size:1.45rem;margin-bottom:8px}
+.evt-modal-body .period{color:var(--gold-2);font-size:.82rem;margin-bottom:10px}
+.evt-modal-actions{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:20px;font-size:.82rem;color:var(--muted)}
+.evt-close-x{position:absolute;top:12px;right:14px;z-index:2;width:34px;height:34px;border-radius:50%;border:1px solid var(--line);
+  background:rgba(0,0,0,.55);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.1rem;cursor:pointer}
+.evt-close-x:hover{background:var(--red)}
+
+/* ===== 이벤트 페이지 ===== */
+.evt-page{max-width:var(--maxw);margin:0 auto;padding:112px 28px 84px}
+.evt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:22px;margin-top:30px}
+.evt-card{border-radius:12px;overflow:hidden;border:1px solid var(--line);background:var(--panel);display:flex;flex-direction:column}
+.evt-card .kv{height:172px;border:0;border-radius:0}
+.evt-card .b{padding:18px;display:flex;flex-direction:column;gap:8px}
+.evt-card .tag{align-self:flex-start;background:rgba(210,59,44,.16);color:var(--red-2);font-size:.68rem;letter-spacing:.08em;padding:4px 10px;border-radius:20px;text-transform:uppercase}
+.evt-card h3{font-family:var(--font-head);font-weight:700;font-size:1.12rem}
+.evt-card .period{color:var(--muted);font-size:.8rem}
+.evt-card .row{display:flex;align-items:center;gap:8px;margin-top:4px}
+.evt-status{font-size:.72rem;padding:3px 10px;border-radius:20px}
+.evt-on{background:rgba(95,209,122,.16);color:#7fe39a}
+.evt-off{background:rgba(120,120,130,.16);color:var(--dim)}
+.evt-detail{margin-top:60px;border-top:1px solid var(--line);padding-top:48px}
+.evt-detail .hero{height:300px;border-radius:14px;position:relative;overflow:hidden;margin-bottom:24px}
+.evt-detail .hero .cap{position:absolute;left:24px;bottom:20px}
+@media(max-width:860px){.evt-modal-kv{height:180px}.evt-detail .hero{height:200px}}

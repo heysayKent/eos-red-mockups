@@ -37,9 +37,27 @@
 </style>
 </head>
 <body>
+<!-- 이벤트 팝업 (접속 시 노출 · CSS 토글로 닫기, JS 없음) -->
+<input type="checkbox" id="evt-pop" class="evt-toggle" checked>
+<div class="evt-modal">
+  <div class="evt-modal-card">
+    <label for="evt-pop" class="evt-close-x" title="닫기">×</label>
+    <div class="evt-modal-kv kv"><span class="tag">EVENT</span></div>
+    <div class="evt-modal-body">
+      <h3>글로벌 런칭 출석 이벤트</h3>
+      <p class="period">06.09 – 06.30 · 매일 접속 보상</p>
+      <p class="lead">런칭 기념, 매일 접속만 해도 보상! 7일 연속 출석 시 한정 코스튬 지급.</p>
+      <div class="evt-modal-actions">
+        <a href="event.html" class="btn btn-play">자세히 보기</a>
+        <label for="evt-pop" style="cursor:pointer">오늘 그만 보기</label>
+      </div>
+    </div>
+  </div>
+</div>
+
 <header class="site-header">
   <div class="brand">EOS <b>RED</b></div>
-  <nav class="nav"><a>특징</a><a>트레일러</a><a>플레이어</a></nav>
+  <nav class="nav"><a>특징</a><a>트레일러</a><a>플레이어</a><a href="event.html">이벤트</a></nav>
   <div class="header-right"><span class="lang">EN ▾</span><span class="btn btn-play">PLAY NOW</span></div>
 </header>
 

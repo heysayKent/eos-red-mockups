@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EOS RED — 이벤트 (목업)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Noto+Serif+KR:wght@500;700;900&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.evt-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.evt-tabs{display:flex;gap:8px}
+.evt-tab{font-size:.82rem;padding:8px 16px;border:1px solid var(--line);border-radius:20px;color:var(--muted)}
+.evt-tab.on{background:var(--red);border-color:var(--red);color:#fff}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="brand">EOS <b>RED</b></div>
+  <nav class="nav"><a>지금 플레이</a><a>뉴스</a><a style="color:var(--text)">이벤트</a><a>커뮤니티</a><a>지원</a></nav>
+  <div class="header-right"><span class="lang">EN ▾</span><span class="btn btn-play">PLAY NOW</span></div>
+</header>
+
+<div class="evt-page">
+  <div class="evt-head">
+    <div>
+      <div class="eyebrow">Events</div>
+      <h1 class="h2" style="font-size:2.6rem">진행 중인 이벤트</h1>
+    </div>
+    <div class="evt-tabs"><span class="evt-tab on">진행 중</span><span class="evt-tab">예정</span><span class="evt-tab">종료</span></div>
+  </div>
+
+  <!-- 이벤트 목록 -->
+  <div class="evt-grid">
+    <article class="evt-card">
+      <div class="kv"><span class="kv-label">키비주얼</span></div>
+      <div class="b"><span class="tag">출석</span><h3>글로벌 런칭 출석 이벤트</h3>
+        <p class="period">06.09 – 06.30</p>
+        <div class="row"><span class="evt-status evt-on">● 진행 중</span></div></div>
+    </article>
+    <article class="evt-card">
+      <div class="kv"></div>
+      <div class="b"><span class="tag">부스트</span><h3>경험치 2배 위크엔드</h3>
+        <p class="period">06.14 – 06.16</p>
+        <div class="row"><span class="evt-status evt-on">● 진행 중</span></div></div>
+    </article>
+    <article class="evt-card">
+      <div class="kv"></div>
+      <div class="b"><span class="tag">쿠폰</span><h3>잿빛 군주 기념 쿠폰</h3>
+        <p class="period">06.09 – 07.09</p>
+        <div class="row"><span class="evt-status evt-on">● 진행 중</span></div></div>
+    </article>
+    <article class="evt-card">
+      <div class="kv"></div>
+      <div class="b"><span class="tag">대회</span><h3>EOS World Championship 예선</h3>
+        <p class="period">07.01 – 07.20</p>
+        <div class="row"><span class="evt-status evt-off">예정</span></div></div>
+    </article>
+    <article class="evt-card">
+      <div class="kv"></div>
+      <div class="b"><span class="tag">시즌</span><h3>시즌1 배틀패스</h3>
+        <p class="period">06.01 – 06.30</p>
+        <div class="row"><span class="evt-status evt-on">● 진행 중</span></div></div>
+    </article>
+    <article class="evt-card">
+      <div class="kv"></div>
+      <div class="b"><span class="tag">복귀</span><h3>귀환 용사 보상</h3>
+        <p class="period">05.20 – 06.05</p>
+        <div class="row"><span class="evt-status evt-off">종료</span></div></div>
+    </article>
+  </div>
+
+  <!-- 이벤트 상세 (예시) -->
+  <section class="evt-detail">
+    <div class="eyebrow">Event Detail</div>
+    <div class="hero kv"><div class="cap"><span class="tag" style="position:static;display:inline-block;background:var(--red);color:#fff;padding:5px 12px;border-radius:5px;font-size:.7rem;letter-spacing:.1em">출석</span><h2 class="h2" style="margin-top:12px">글로벌 런칭 출석 이벤트</h2></div></div>
+    <p class="period" style="color:var(--gold-2);margin-bottom:16px">기간 06.09 – 06.30 · 매일 접속 보상</p>
+    <p class="lead">런칭을 기념해 매일 접속만 해도 보상을 드립니다. 7일 연속 출석 시 한정 코스튬과 캐시 보상을 획득하세요. 보상은 인게임 우편함으로 지급됩니다.</p>
+    <h3 class="h2" style="font-size:1.4rem;margin-top:32px">보상 안내</h3>
+    <div class="evt-grid" style="margin-top:16px">
+      <div class="evt-card"><div class="b"><span class="tag">DAY 1–6</span><h3 style="font-size:1rem">일일 보상</h3><p class="period">소모품·강화석·Penya</p></div></div>
+      <div class="evt-card"><div class="b"><span class="tag">DAY 7</span><h3 style="font-size:1rem">한정 코스튬</h3><p class="period">잿빛 군주 세트</p></div></div>
+      <div class="evt-card"><div class="b"><span class="tag">보너스</span><h3 style="font-size:1rem">CASH 보상</h3><p class="period">충전 시 추가 지급</p></div></div>
+    </div>
+  </section>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div><div class="brand" style="font-size:1.1rem;margin-bottom:10px">EOS <b>RED</b></div>
+      <div class="note">© BluePotion Games(IP). 글로벌 서비스 by BPMG — 목업.</div></div>
+    <div class="social"><span>D</span><span>X</span><span>f</span><span>▶</span></div>
+    <div class="rating">IARC / 글로벌 등급 표기 영역</div>
+    <div class="legal"><span>이용약관</span><span>개인정보처리방침</span><span>운영정책</span><span>고객지원</span></div>
+  </div>
+</footer>
+
+<div class="mock-flag">목업 · 이벤트 페이지(Ⅰ-12) · 외형 전용</div>
+</body>
+</html>
